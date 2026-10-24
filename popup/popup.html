@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infinity Snap</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/icon48.png" alt="" width="36" height="36">
+    <div>
+      <h1>Infinity Snap</h1>
+      <p class="sub">Turn to dust in Google Meet</p>
+    </div>
+  </header>
+
+  <div id="banner" class="banner" hidden></div>
+
+  <section class="chips">
+    <div class="chip"><span class="dot" id="dotCam"></span><span>Camera</span><b id="valCam">-</b></div>
+    <div class="chip"><span class="dot" id="dotMic"></span><span>Snap mic</span><b id="valMic">-</b></div>
+    <div class="chip"><span class="dot" id="dotRoom"></span><span>Empty room</span><b id="valRoom">-</b></div>
+  </section>
+
+  <button id="snapBtn" class="primary">🫰 Snap now</button>
+  <div class="row2">
+    <button id="plateBtn">Save empty room</button>
+    <button id="clearBtn" class="ghost">Clear</button>
+  </div>
+  <p class="hint" id="phaseHint"></p>
+
+  <section class="settings">
+    <label class="switch"><input type="checkbox" id="enabled"><span>Enabled</span></label>
+    <label class="switch"><input type="checkbox" id="soundTrigger"><span>Trigger on the sound of a snap</span></label>
+    <label class="slider">
+      <span>Snap sensitivity <b id="sensVal"></b></span>
+      <input type="range" id="sensitivity" min="1" max="10" step="1">
+    </label>
+    <label class="slider">
+      <span>Gone for <b id="durVal"></b> s</span>
+      <input type="range" id="duration" min="12" max="60" step="1">
+    </label>
+    <label class="switch"><input type="checkbox" id="rawMic"><span>Use a separate raw mic stream (works while muted)</span></label>
+  </section>
+
+  <footer>
+    <span><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> snap · <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd> save room</span>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>
